@@ -1,8 +1,15 @@
+/* 1. Nhập font Plus Jakarta Sans từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 @import "tailwindcss";
 
+/* 2. Cấu hình biến font trong Tailwind v4 */
+@theme {
+  --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
+}
 /* @theme {
   /* Bạn có thể thêm màu pastel vào đây nếu dùng Tailwind v4 */
-} */
+/* } */
 
 /* Các kiểu giấy note */
 .paper-lined {
@@ -42,4 +49,15 @@
   opacity: 0.2;
   background: url('https://www.transparenttextures.com/patterns/cardboard-flat.png');
   pointer-events: none;
+}
+
+/* Ẩn thanh cuộn nhưng vẫn cho phép cuộn */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
