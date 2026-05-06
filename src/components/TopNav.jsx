@@ -1,10 +1,10 @@
 import { Bell, Settings, Search } from 'lucide-react';
 import React from 'react'
 
-const TopNav = () => {
+const TopNav = () => {  
   const tabs = [
-    { id: 'weeklyBoard', label: 'Mục tiêu của tuần', active: true },
-    { id: 'monthlyGoals', label: "Mục tiêu của tháng", active: false }
+    { id: 'events', label: 'Sự kiện', active: true },
+    { id: 'tasks', label: "Nhiệm vụ", active: false }
   ];
   return (
     <nav className='flex justify-between items-center px-10 py-4 rounded-full border border-gray-100 bg-white/80 mb-8 shadow-md backdrop-blur sticky top-4 z-50'>
@@ -18,7 +18,7 @@ const TopNav = () => {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              className={`cursor-pointer relative text-sm transition-all tracking-tight pb-2 hover:scale-110 ${tab.active ? 'text-[#884A6C] font-bold' : 'text-gray-400 hover:text-gray-600 hover:font-bold'}`}
+              className={`cursor-pointer relative text-medium transition-all tracking-tight pb-2 hover:scale-110 ${tab.active ? 'text-[#884A6C] font-bold' : 'text-gray-400 hover:text-gray-600 hover:font-bold'}`}
             >
               {tab.label}
               {tab.active && (
