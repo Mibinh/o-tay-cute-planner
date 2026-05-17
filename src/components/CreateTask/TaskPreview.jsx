@@ -1,0 +1,1 @@
+// Thành phần hiển thị kết quả thời gian thực bên phải
